@@ -10,16 +10,16 @@ from typing import Any
 import hashlib
 # Create an instance of the sha256 hashing function
 sha = hashlib.sha256()
-# Create the data input to be hashed
-my_data = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisi et nunc sollicitudin laoreet in sed neque. Proin convallis varius odio, id euismod justo tristique at. Cras at ultricies nisi, sed vulputate ante. Praesent faucibus odio in tortor tincidunt tincidunt. Vivamus interdum, tortor ac semper laoreet, nisl nibh tincidunt ante, vitae iaculis arcu sapien quis turpis. Nunc in ullamcorper enim. Sed in est egestas, pulvinar orci in, laoreet nisl."
+# # Create the data input to be hashed
+# my_data = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisi et nunc sollicitudin laoreet in sed neque. Proin convallis varius odio, id euismod justo tristique at. Cras at ultricies nisi, sed vulputate ante. Praesent faucibus odio in tortor tincidunt tincidunt. Vivamus interdum, tortor ac semper laoreet, nisl nibh tincidunt ante, vitae iaculis arcu sapien quis turpis. Nunc in ullamcorper enim. Sed in est egestas, pulvinar orci in, laoreet nisl."
 
-# Encode the data using the encode function
-encoded_data = my_data.encode()
-# Hash the encoded data
-sha.update(encoded_data)
+# # Encode the data using the encode function
+# encoded_data = my_data.encode()
+# # Hash the encoded data
+# sha.update(encoded_data)
 
-# Print the hash code
-print(sha.hexdigest())
+# # Print the hash code
+# print(sha.hexdigest())
 
 ##########################################################################
 st.write("# Python Web App")
@@ -47,7 +47,14 @@ class Block:
 
         return sha.hexdigest()
 
+# Create a new block instance using some test data
+# new_block = Block(data="test", creator_id=42)
 
+# Calculate the block hash using the new method
+# block_hash = new_block.hash_block()
+
+# Print the block's hash
+# print(block_hash)
 #-------------------------------------------------------
 # Create a data class called Counter
 @dataclass
@@ -70,13 +77,14 @@ print("The current count is: ", new_counter.count)
 #-----------------------------------------------------------
 input_value = st.text_input("Enter a Message")
 # Encode the data using the encode function
-encoded_data = input_value.encode()
+# encoded_data = input_value.encode()
 # Hash the encoded data
-sha.update(encoded_data)
+# sha.update(encoded_data)
 # Creating a new block
-new_block = Block(data=sha.hexdigest(), creator_id=42)
+new_block = Block(data=sha.hexdigest(), creator_id=168)
 # Print the new block
 # print(new_block)
 if st.button("Display Message"):
+    st.write(f"Input Value: {input_value}")
     st.write(f"Output Hash (fingerprint): {new_block}")
     st.write(f"Output Length: {len(input_value)}")
