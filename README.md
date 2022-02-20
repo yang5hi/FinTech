@@ -11,7 +11,9 @@ Used FinTech python functions like shift() and pct_change() to check stock price
 
 ## TimeSeries
 
-TimeSeries studies.
+TimeSeries studies with Prophet.
+
+Installed Prophet and Pystan
 
 ## BlockChain
 
