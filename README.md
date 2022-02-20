@@ -21,6 +21,3 @@ Installed Prophet and Pystan
 
 This is log my reading regarding the blockchain topic.
 Installed streamlit, which requied me to have a new python env only contains Streamlit
-
-
----
