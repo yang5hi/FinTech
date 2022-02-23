@@ -13,11 +13,11 @@ Used FinTech python functions like shift() and pct_change() to check stock price
 TimeSeries studies with Prophet.
 
 Installed Prophet and Pystan
-[Instuction](https://github.com/coding-boot-camp/FinTech-Online/blob/9638007cca8e840e21da5560f4467420483c8862/01-Async-Lesson-Plans/11-Time-Series/03-Time_Series_Forecasting/03-Time_Series_Forecasting.md)
+[Instruction](https://github.com/coding-boot-camp/FinTech-Online/blob/9638007cca8e840e21da5560f4467420483c8862/01-Async-Lesson-Plans/11-Time-Series/03-Time_Series_Forecasting/03-Time_Series_Forecasting.md)
 
-
+End up using Colab for this subject.
 
 ## BlockChain
 
-This is log my reading regarding the blockchain topic.
-Installed streamlit, which requied me to have a new python env only contains Streamlit
+This is my progress of the blockchain topic.
+Installed streamlit, which required me to have a new python env only contains Streamlit
