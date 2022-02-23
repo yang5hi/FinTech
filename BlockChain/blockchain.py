@@ -1,12 +1,10 @@
 # Imports
 import streamlit as st
-import numpy as np
 import pandas as pd
-from typing import List
+from typing import List, Any
 from dataclasses import dataclass
 # Creating the Block data class
 from datetime import datetime
-from typing import Any
 import hashlib
 #########################################################################
 # Creating the Block data class
@@ -22,6 +20,9 @@ class Block:
 
         data = str(self.data).encode()
         sha.update(data)
+
+        creator_id = str(self.creator_id).encode()
+        sha.update(creator_id)
 
         timestamp = str(self.timestamp).encode()
         sha.update(timestamp)
@@ -49,4 +50,17 @@ pychain = setup()
 st.markdown("# PyChain: A Python Blockcahin Application")
 st.markdown("## Store Data in the Chain")
 
-input_date = st.text_input("Block Data")
+input_data = st.text_input("Block Data")
+
+
+if st.button("Add Block"):
+    prev_block = pychain.chain[-1]
+    prev_block_hash = prev_block.hash_block()
+    new_block = Block(data=input_data, creator_id=42, prev_hash=prev_block_hash)
+
+
+st.markdown("## PyChain Ledger")
+
+pychain_df= pd.DataFrame(pychain.chain)
+st.write(pychain_df)
+st.write("abcd")
