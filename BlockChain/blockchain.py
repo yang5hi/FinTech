@@ -12,7 +12,7 @@ import hashlib
 class Block:
     data: Any
     creator_id: int
-    prev_hash: str = 0
+    prev_hash: str = "0"
     timestamp: str = datetime.utcnow().strftime("%H:%M:%S")
 
     def hash_block(self):
@@ -57,7 +57,7 @@ if st.button("Add Block"):
     prev_block = pychain.chain[-1]
     prev_block_hash = prev_block.hash_block()
     new_block = Block(data=input_data, creator_id=42, prev_hash=prev_block_hash)
-
+    pychain.add_block(new_block)
 
 st.markdown("## PyChain Ledger")
 
