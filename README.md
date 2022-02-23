@@ -4,11 +4,11 @@ This is to log my upskill from 2/15 to 2/22 learning three topics in FinTech
 
 
 
-## QA
+## QA 1hr
 Used FinTech python functions like shift() and pct_change() to check stock prices and calculate changes over time.
 
 
-## TimeSeries
+## TimeSeries  2hr
 
 TimeSeries studies with Prophet.
 
@@ -17,7 +17,7 @@ Installed Prophet and Pystan
 
 End up using Colab for this subject.
 
-## BlockChain
+## BlockChain 5hr
 
 This is my progress of the blockchain topic.
 Installed streamlit, which required me to have a new python env only contains Streamlit
